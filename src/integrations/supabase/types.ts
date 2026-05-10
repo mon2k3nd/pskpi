@@ -14,7 +14,104 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      daily_sales: {
+        Row: {
+          created_at: string
+          id: string
+          product_id: string
+          quantity: number
+          sale_date: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          product_id: string
+          quantity?: number
+          sale_date: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          product_id?: string
+          quantity?: number
+          sale_date?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "daily_sales_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      monthly_targets: {
+        Row: {
+          created_at: string
+          id: string
+          month: number
+          revenue_target: number
+          unit_target: number
+          updated_at: string
+          user_id: string
+          year: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          month: number
+          revenue_target?: number
+          unit_target?: number
+          updated_at?: string
+          user_id: string
+          year: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          month?: number
+          revenue_target?: number
+          unit_target?: number
+          updated_at?: string
+          user_id?: string
+          year?: number
+        }
+        Relationships: []
+      }
+      products: {
+        Row: {
+          aliases: string | null
+          commission: number
+          created_at: string
+          id: string
+          name: string
+          price: number
+          user_id: string
+        }
+        Insert: {
+          aliases?: string | null
+          commission?: number
+          created_at?: string
+          id?: string
+          name: string
+          price?: number
+          user_id: string
+        }
+        Update: {
+          aliases?: string | null
+          commission?: number
+          created_at?: string
+          id?: string
+          name?: string
+          price?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
