@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "KPI" },
+      { name: "description", content: "KPI không chỉ đơn thuần là một chỉ số đo lường, mà còn là một hệ thống phần mềm quản trị thông minh giúp doanh nghiệp kiểm soát chặt chẽ doanh số bán." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "KPI" },
+      { property: "og:description", content: "KPI không chỉ đơn thuần là một chỉ số đo lường, mà còn là một hệ thống phần mềm quản trị thông minh giúp doanh nghiệp kiểm soát chặt chẽ doanh số bán." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "KPI" },
+      { name: "twitter:description", content: "KPI không chỉ đơn thuần là một chỉ số đo lường, mà còn là một hệ thống phần mềm quản trị thông minh giúp doanh nghiệp kiểm soát chặt chẽ doanh số bán." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/RDngJ6dBw1fIZwO2WHegJ1WYKCP2/social-images/social-1778390313368-Gemini_Generated_Image_77orx677orx677or.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/RDngJ6dBw1fIZwO2WHegJ1WYKCP2/social-images/social-1778390313368-Gemini_Generated_Image_77orx677orx677or.webp" },
     ],
     links: [
       {
